@@ -245,7 +245,7 @@ class iptables (
   }
 
   ### Include custom class if $my_class is set
-  if $iptables::my_class {
+  if $iptables::my_class and $iptables::my_class != '' {
     include $iptables::my_class
   }
 
